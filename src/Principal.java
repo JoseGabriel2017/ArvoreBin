@@ -25,5 +25,7 @@ public class Principal {
 
         System.out.println("\nÁrvore em ordem após a remoção do menor:");
         e.inOrdem();
+
+        System.out.println("\nAltura da árvore: " + e.altura());
     }
 }

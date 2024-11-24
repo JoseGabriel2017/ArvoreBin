@@ -98,4 +98,17 @@ public class Estrutura {
         no.setEsquerda(removerMenor(no.getEsquerda()));
         return no;
     }
+
+    public int altura() {
+        return altura(this.raiz);
+    }
+
+    private int altura(No no) {
+        if (no == null) {
+            return 0;
+        }
+        int alturaEsquerda = altura(no.getEsquerda());
+        int alturaDireita = altura(no.getDireita());
+        return Math.max(alturaEsquerda, alturaDireita) + 1;
+    }
 }
